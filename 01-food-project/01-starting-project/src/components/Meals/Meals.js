@@ -3,7 +3,7 @@ import React from "react";
 import MealsSummary from "./MealsSummary";
 import AvailableMeals from "./AvailableMeals";
 
-const Meals = () => {
+const Meals = (props) => {
   return (
     <>
       <MealsSummary />

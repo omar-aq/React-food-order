@@ -31,7 +31,7 @@ const DUMMY_MEALS = [
   },
 ];
 
-const AvailableMeals = () => {
+const AvailableMeals = (props) => {
   return (
     <section className={classes.meals}>
       <Card>
