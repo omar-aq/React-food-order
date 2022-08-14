@@ -14,8 +14,8 @@ const Cart = (props) => {
   const hasItems = cartCtx.items.length > 0;
   const cartItems = (
     <ul className={classes["cart-items"]}>
-      {cartCtx.items.map((item) => (
-        <li key={item.id}>{item.name}</li>
+      {cartCtx.items.map((item, index) => (
+        <li key={index}>{item.name}</li>
       ))}
     </ul>
   );
