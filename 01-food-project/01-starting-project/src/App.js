@@ -1,19 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 //components
-import Header from "./components/Layout/Header";
-import Meals from "./components/Meals/Meals";
-import Cart from "./components/Card/Cart";
+import { Home } from "./components/pages/Home";
+import NewPage from "./components/pages/NewPage";
 import CartProvider from "./store/CartProvider";
 
 function App() {
-  const [isClicked, setIsClicked] = useState(false);
   return (
     <CartProvider>
-      {isClicked && <Cart setIsClicked={setIsClicked} />}
-      <Header setIsClicked={setIsClicked} />
-      <main>
-        <Meals />
-      </main>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/newPage" element={<NewPage />} />
+        </Routes>
+      </BrowserRouter>
     </CartProvider>
   );
 }
